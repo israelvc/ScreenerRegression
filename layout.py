@@ -18,7 +18,7 @@ app.layout = html.Div(
         html.Div(
             children=[
                 html.H2("Securities Screener",
-                        style={'text-align': 'center'}),
+                         style={'text-align': 'center', 'color':'red'}),
                 html.Label("Select a coin:"),
                 dcc.Dropdown(
                     id = 'screenFileList',
