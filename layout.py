@@ -18,7 +18,7 @@ app.layout = html.Div(
         html.Div(
             children=[
                 html.H2("Securities Screener",
-                         style={'text-align': 'center', 'color':'red'}),
+                         style={'text-align': 'center', 'color':'black'}),
                 html.Label("Select a coin:"),
                 dcc.Dropdown(
                     id = 'screenFileList',
@@ -40,21 +40,49 @@ app.layout = html.Div(
                 daq.NumericInput(
                     id='rsiLength',
                     value=5,
-                    size = 70,
+                    size = 100,
                     style={'margin-bottom': '10px'}
                 ),
                 html.Label("Stochastic length:"),
                 daq.NumericInput(
                     id='stochasticLength',
                     value=5,
-                    size = 70,
+                    size = 100,
                     style={'margin-bottom': '10px'}
                 ),
                 html.Label("CCI length:"),
                 daq.NumericInput(
                     id='cciLength',
                     value = 13,
-                    size = 70,
+                    size = 100,
+                    style={'margin-bottom': '10px'}
+                ),
+                html.Label("CMO length:"),
+                daq.NumericInput(
+                    id='cmoLength',
+                    value = 5,
+                    size = 100,
+                    style={'margin-bottom': '10px'}
+                ),
+                html.Label("BB PCT length:"),
+                daq.NumericInput(
+                    id='bbpctLength',
+                    value = 13,
+                    size = 100,
+                    style={'margin-bottom': '10px'}
+                ),
+                html.Label("Fisher length:"),
+                daq.NumericInput(
+                    id='fisherTransformLength',
+                    value = 9,
+                    size = 100,
+                    style={'margin-bottom': '10px'}
+                ),
+                html.Label("VZO length:"),
+                daq.NumericInput(
+                    id='vzoLength',
+                    value = 13,
+                    size = 100,
                     style={'margin-bottom': '10px'}
                 ),
                 dcc.Dropdown(
